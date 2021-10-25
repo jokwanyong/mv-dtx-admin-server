@@ -1,0 +1,39 @@
+
+{
+  "test": {
+    "host": "ec2-13-125-221-170.ap-northeast-2.compute.amazonaws.com",
+    "host1": "172.31.0.67",
+    "": ""
+  },
+  "development": {
+    "username": "movements",
+    "password": "pipe1234",
+    "database": "pipeLine",  
+    "host": "ec2-13-125-221-170.ap-northeast-2.compute.amazonaws.com",
+    "timezone": "+09:00",
+    "dialect": "mariadb",
+    "operatorsAliases": false,
+    "freezeTableName": true
+  },
+  "production": {
+    "username": "movements",
+    "password": "pipe1234",
+    "database": "pipeLine",
+    "host": "127.0.0.1",
+    "timezone": "+09:00",
+    "dialect": "mariadb",
+    "operatorsAliases": false,
+    "freezeTableName": true,
+    "pool": {
+      "max": 10,
+      "min": 1,
+      "acquire": 120000,
+      "idle": 120000,
+      "evict": 120000,
+      "handleDisconnects": true
+    },
+    "dialectOptions": {
+      "connectTimeout": 180
+    }
+  }
+}

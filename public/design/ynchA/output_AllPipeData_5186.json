@@ -1,0 +1,115 @@
+{
+  "1": [
+    {
+      "crossPoint": "none",
+      "missingNode": "none",
+      "missingValve": "none",
+      "startPoint": [
+        {
+          "x": 546478.7612903219,
+          "y": 207324.90322580663,
+          "zPre": 15.93426969,
+          "zPost": "none",
+          "nodeType": "normal",
+          "nodeName": "1-029"
+        }
+      ],
+      "endPoint": [
+        {
+          "valve": "none",
+          "x": 546478.7612903229,
+          "y": 207344.90322580587,
+          "zPre": 12.70431555,
+          "zPost": "none",
+          "nodeType": "normal",
+          "nodeName": "1-030"
+        }
+      ]
+    }
+  ],
+  "2": [
+    {
+      "crossPoint": "none",
+      "missingNode": "none",
+      "missingValve": "none",
+      "startPoint": [
+        {
+          "x": 546474.4258064515,
+          "y": 207324.90322580643,
+          "zPre": 12.90460115,
+          "zPost": "none",
+          "nodeType": "normal",
+          "nodeName": "1-028"
+        }
+      ],
+      "endPoint": [
+        {
+          "valve": "none",
+          "x": 546474.4258064516,
+          "y": 207344.90322580727,
+          "zPre": 15.93426969,
+          "zPost": "none",
+          "nodeType": "normal",
+          "nodeName": "1-029"
+        }
+      ]
+    }
+  ],
+  "3": [
+    {
+      "crossPoint": "none",
+      "missingNode": "none",
+      "missingValve": "none",
+      "startPoint": [
+        {
+          "valve": "none",
+          "x": 546485.2645161289,
+          "y": 207354.01290322587,
+          "zPre": 15.93426969,
+          "zPost": "none",
+          "nodeType": "normal",
+          "nodeName": "1-029"
+        }
+      ],
+      "endPoint": [
+        {
+          "x": 546465.2645161283,
+          "y": 207354.0129032256,
+          "zPre": 10.16262149,
+          "zPost": "none",
+          "nodeType": "normal",
+          "nodeName": "1-032"
+        }
+      ]
+    }
+  ],
+  "4": [
+    {
+      "crossPoint": "none",
+      "missingNode": "none",
+      "missingValve": "none",
+      "startPoint": [
+        {
+          "valve": "none",
+          "x": 546485.7290322582,
+          "y": 207361.13548387002,
+          "zPre": 10.16262149,
+          "zPost": "none",
+          "nodeType": "normal",
+          "nodeName": "1-032"
+        }
+      ],
+      "endPoint": [
+        {
+          "valve": "none",
+          "x": 546465.7290322584,
+          "y": 207361.13548387156,
+          "zPre": 10.31523292,
+          "zPost": "none",
+          "nodeType": "normal",
+          "nodeName": "1-084"
+        }
+      ]
+    }
+  ]
+}

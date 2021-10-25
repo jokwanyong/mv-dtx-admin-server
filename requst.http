@@ -1,0 +1,16 @@
+- startPoint : 파이프 시작점
+- endPoint : 파이프 종료점
+- crossPoint : 교차점 ( T자관 )
+- missingNode : 파이프 라인 형상 위에 포함되지 않는 노드 
+- missingValve : 파이프 라인 형상 위에 포함되지 않는 밸브
+
+---
+
+* 파이프 (pipe) 
+startNode, startLat, startLon, startDepthPre, startDepthPost, startType[normal, candidate], endNode, endLat, endLon, endDepthPre, endDepthPost, endType
+
+* 밸브 (valve)
+lat, lon, type[manual, auto, multi]
+
+* 미포함 절점 (exceptNode)
+node, lat, lon, depthPre, depthPost, type

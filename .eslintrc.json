@@ -1,0 +1,21 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "extends": ["eslint:recommended", "prettier"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 12
+  },
+  "rules": {
+    "no-undef": "off",
+    "no-unused-vars": "warn",
+    "no-console": "off"
+  }
+}

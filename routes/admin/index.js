@@ -30,7 +30,7 @@ const Op = sequelize.Op;
 /**
  * 관리자 로그인
  * 아이디 및 비밀번호 동일함.
- * 
+ *
  */
 
 router.post('/login', async (req, res, next) => {
@@ -42,44 +42,43 @@ router.post('/login', async (req, res, next) => {
     var result = await sequelize.Admin.findOne({
       where: {
         user_id: req.body.username,
-        user_pw: JSON.stringify(Config.encrypt(param.password))
-      }
-    })
-    
-    if(result !== null) {
+        user_pw: JSON.stringify(Config.encrypt(param.password)),
+      },
+    });
+
+    if (result !== null) {
       var data = {};
       data.token = Config.generate_key();
       data.username = result.user_id;
       var secretOrPrivateKey = Config.secret;
-      var options = {expiresIn: 60*60*24};
-  
-      jwt.sign(data, secretOrPrivateKey, options, function(err, token){
-        if(err) {
-          console.log(err)
-          return res.json({"result": "error"})
-        };
-        res.json({token});
+      var options = { expiresIn: 60 * 60 * 24 };
+
+      jwt.sign(data, secretOrPrivateKey, options, function (err, token) {
+        if (err) {
+          console.log(err);
+          return res.json({ result: 'error' });
+        }
+        res.json({ token });
       });
-    }
-    else {
-      res.send("ERROR");
+    } else {
+      res.send('ERROR');
     }
   } catch (error) {
     console.log(error);
-    res.send("ERROR");
+    res.send('ERROR');
   }
 });
 
 /**
  * 관리자 들어올 시 토큰 없으면 에러처리
  * 현재 주석 한채로 사용중.
- * 
+ *
  */
 
 // router.use((req, res, next) => {
 //   var secretOrPrivateKey = Config.secret;
 //   var token = req.headers['x-access-token'];
-  
+
 //   if (!token) return res.status(403).json('token is required!');
 //   else {
 //     jwt.verify(token, secretOrPrivateKey, (err, decoded) => {
@@ -89,7 +88,7 @@ router.post('/login', async (req, res, next) => {
 //         next();
 //       }
 //     });
-//   } 
+//   }
 // });
 
 router.use('/area', areaRoute);

@@ -19,7 +19,7 @@
     "username": "movements",
     "password": "pipe1234",
     "database": "pipeLine",
-    "host": "127.0.0.1",
+    "host": "54.180.139.187",
     "timezone": "+09:00",
     "dialect": "mariadb",
     "operatorsAliases": false,

@@ -67,3 +67,5 @@
 *.flv
 *.mov
 *.wmv
+lib
+*.gz

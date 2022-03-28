@@ -378,8 +378,10 @@ router.get('', async (req, res) => {
         e.imgs = imgs;
 
         var orthogonal = busan_Rectangle_range(
-          e.latlon.coordinates[1],
-          e.latlon.coordinates[0],
+          e.lon,
+          e.lat,
+          // e.latlon.coordinates[1],
+          // e.latlon.coordinates[0],
         );
 
         e.x = orthogonal[1];
@@ -688,6 +690,7 @@ router.post('', async (req, res, next) => {
         diameter: req.body.diameter,
         instrument_height: req.body.instrument_height,
         hole_depth: req.body.hole_depth,
+        branch_pipe_id: req.body.branch_pipe_id,
       },
       { transaction: transaction },
     );
@@ -909,6 +912,7 @@ router.put('/:id', async (req, res, next) => {
               diameter: req.body.diameter,
               instrument_height: req.body.instrument_height,
               hole_depth: req.body.hole_depth,
+              branch_pipe_id: req.body.branch_pipe_id,
             },
             {
               where: {

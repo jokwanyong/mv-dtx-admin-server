@@ -599,6 +599,7 @@ router.post('', async (req, res, next) => {
               type: req.body.type,
               curve_degree: req.body.curve_degree,
               measure_date: date,
+              branch_pipe_id: req.body.branch_pipe_id,
             },
             { transaction: t },
           ).then((insert) => {
@@ -759,6 +760,7 @@ router.put('/:id', async (req, res, next) => {
         facility_depth: req.body.facility_depth,
         img: image_title.join(),
         measure_date: req.body.measure_date,
+        branch_pipe_id: req.body.branch_pipe_id,
       },
       {
         where: {

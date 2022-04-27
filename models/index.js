@@ -9,7 +9,7 @@ import config from '../config/config.json';
 
 const basename = path.basename(__filename);
 // const env = process.platform === 'linux' ? 'production' : 'development';// const env = process.env.NODE_ENV;
-var env = 'development';
+var env = 'production';
 const db = {};
 
 const sequelize = new Sequelize(

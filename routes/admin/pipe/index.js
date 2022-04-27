@@ -437,7 +437,6 @@ router.delete('/:id', async (req, res, next) => {
             },
             transaction: transaction
         });
-
         await sequelize.Pipe.destroy({
             where: {
                 fid: req.params.id

@@ -13,7 +13,6 @@ config.DBConfig = {
     database: 'pipeLine',
     connectionLimit: 10,
     waitForConnections: true,
-    connectionLimit: 10,
     multipleStatements: true
 };
 

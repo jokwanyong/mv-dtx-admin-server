@@ -662,9 +662,18 @@ router.put('/:id', async (req, res, next) => {
   try {
     let x = req.body.x;
     let y = req.body.y;
+    let lat = req.body.lat;
+    let lon = req.body.lon;
 
-    let wgs84 = busan_Rectangle_WGS84(y, x);
-    let point = { type: 'Point', coordinates: [wgs84[1], wgs84[0]] };
+    /*x,y 좌표 변환??*/
+    // if(x && y) {
+      let wgs84 = busan_Rectangle_WGS84(y, x);
+      let point = { type: 'Point', coordinates: [wgs84[1], wgs84[0]] };
+    // } else { /*lat,lon 넣어서 x,y로 변경하는 로직은 왜 없음? x,y 받은 값 그대로 저장?*/
+      // let wgs84 = busan_Rectangle_WGS84(lat, lon); /*TODO: lat,lon 구현하는 함수 필요.*/
+      // let point = lat+lot;
+      /*vali*/
+    // }
 
     // var point = { type: 'Point', coordinates: [req.body.lat, req.body.lon] };
     sequelize.Smart.hasOne(sequelize.ModelRelation, { foreignKey: 'fid' });
